@@ -34,13 +34,6 @@ is_reachable() {
     fi
 }
 
-TMPFILE=$(mktemp)
-
 for i in ${SKEL}.{1..254}; do
-    is_reachable $i >> $TMPFILE &
+    is_reachable $i &
 done
-
-wait $(jobs -p)
-
-cat $TMPFILE | sort -n -t . -k 1,1 -k 2,2 -k 3,3 -k 4,4
-rm $TMPFILE

@@ -14,3 +14,4 @@ netexplore is a suite of Linux command-line scripts aimed at exploring the netwo
     1. `CIDR`: CIDR to scan.
 * Caveats:
     * Currently, only `/24` netmasks are supported.
+    * Due to constraints in embedded terminals, I cannot wait for background jobs to finish.
