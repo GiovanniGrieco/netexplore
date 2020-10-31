@@ -34,7 +34,7 @@ is_reachable() {
     fi
 }
 
-TMPFILE=$(tempfile)
+TMPFILE=$(mktemp)
 
 for i in ${SKEL}.{1..254}; do
     is_reachable $i >> $TMPFILE &
